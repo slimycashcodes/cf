@@ -1,0 +1,9 @@
+n = int(input())
+l = list(map(int,input().split()))
+mn = n - l[::-1].index(min(l)) - 1
+mx = l.index(max(l))
+
+c = mx - 1 + n - mn 
+if mx>mn:
+    c-=1
+print(c)
